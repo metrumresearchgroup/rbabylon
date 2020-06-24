@@ -328,12 +328,12 @@ get_bbi_exe_path <- function() {
       sep = "\n"))
   }
 
-  if (!fs::file_exists(.bbi_path)) {
-    strict_mode_error(paste(
-      glue("`options('rbabylon.bbi_exe_path')` must be set to an existing file but {.bbi_path} does not exist."),
-      BBI_EXE_REC_MSG,
-      sep = "\n"))
-  }
+  # if (!fs::file_exists(.bbi_path)) {
+  #   strict_mode_error(paste(
+  #     glue("`options('rbabylon.bbi_exe_path')` must be set to an existing file but {.bbi_path} does not exist."),
+  #     BBI_EXE_REC_MSG,
+  #     sep = "\n"))
+  # }
 
   return(.bbi_path)
 }
